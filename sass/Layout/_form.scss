@@ -1,0 +1,52 @@
+$colour-primary: #15DEA5;
+$colour-secondary: #001534;
+$colour-accent: #D6FFF5;
+$colour-white: #fff;
+$colour-invalid: #DB464B;
+$txt-input-palette: (
+  active: (
+      bg: $colour-primary,
+      border: $colour-primary,
+      txt: $colour-white,
+  ),
+  focus: (
+      bg: $colour-primary,
+      border: $colour-primary,
+      txt: $colour-white,
+  ),
+  invalid: (
+      bg: $colour-invalid,
+      border: $colour-white,
+      txt: $colour-white,
+  )
+);
+
+
+
+
+
+$map: (
+  logo: 7rem,
+  heading: 5rem,
+  project-heading: 4rem,
+  label:2rem
+);
+
+$font-size: (logo:7rem,heading:5rem project-heading:4, label:2rem);
+
+
+//Pour accéder à la valeur d’une map, 
+//c’est aussi un peu différent. Avec les maps, il faut utiliser la fonction  map-get() ;
+//celle-ci nécessite deux arguments : le premier est le nom de la map (ici $font-size), 
+//et le second est le nom de la clé (ici label).
+
+// $font-size: (logo:7rem, heading:5rem, project-heading:4rem, label:2rem);
+//.form{
+//   &__field {
+//       & label {
+//           font-size: map-get($font-size, label);
+//        }
+//    }
+//  }
+
+    

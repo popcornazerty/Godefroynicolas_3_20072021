@@ -1,12 +1,24 @@
-/*Mise en page*/
 @charset "UTF-8";
+/*@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./base/fondation";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";*/
+/*Couleurs*/
+/*Boutons violets*/
 html {
   box-sizing: border-box;
-  /*
   font-family: "shrikhand";
   font-weight: 900;
-  color: green;
-  */
+  color: red;
 }
 html .container {
   max-width: 576px;
@@ -14,97 +26,11 @@ html .container {
   overflow-x: hidden;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: "roboto";
 }
 html .first_title {
   width: 150px;
-  margin-bottom: 5px;
 }
 
-/*Couleurs*/
-/*Boutons violets*/
-.btn_explorer {
-  background-color: #9356DC;
-  color: #fff;
-  border-radius: 6rem;
-  box-shadow: 20px blue;
-}
-/*grey background + Logo localisation*/
-#background_grey {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #edf2f4;
-  height: 50px;
-  border: 1px solid #eeeeee;
-}
-.destination{
-  position: relative;
-  left:10px;
-}
-/*Light grey background*/
-#background_light_grey{
-  background-color: #F2F2F2;
-  height: 150px;
-  border: 1px solid #eeeeee;
-  
-}
-/*Second Title*/
-.second_title{
-  font-weight: 900;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-/*Liste Restaurants*/
-#wrapper-all-restaurants {
-  display: flex;
-  gap: 30px;
-}
-/*Fond gris restaurants*/
-#wrapper-area {
-  padding: 10px 30px 10px 30px;
-  border-radius: 15px;
-  background: #F2F2F2;
-  margin-top: 10px;
-  width: 100%;
-  height: 1240px;
-}
-
-/*Taille images cartes*/
-#flex-area a img {
-  object-fit: cover;
-  width: 100%;
-  height: 60%;
-  border-radius: 10px 10px 0 0;
-  background: #fff;
-  box-shadow: 1px 0px 3px 0px rgb(158 158 158);
-}
-/*Selection ensemble sans l'image*/
-#flex-area a *:not(img) {
-  margin-left: 5px;
-  display: flex;
-  line-height: 1.5em;
-  
-}
-/*Style et taille police cartes premier enfant*/
-#flex-area a span:first-of-type {
-  font-weight: bold;
-  font-size: 0.7rem;
-}
-/*Style et taille police cartes deuxieme enfant*/
-#flex-area a span:nth-of-type(2) {
-  font-size: 0.6rem;
-}
-
-
-
-
-#wrapper-area #flex-area {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 /*
   .typography {
       color: $colour-primary;
@@ -322,6 +248,4 @@ $color-secondary:#EA526F;
 
 
 
-          */
-
-/*# sourceMappingURL=mobile.css.map */
+          *//*# sourceMappingURL=main.css.map */
