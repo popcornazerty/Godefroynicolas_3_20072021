@@ -1,270 +1,342 @@
-/*@import "./utils/variables";
-@import "./utils/functions";
-@import "./utils/mixins";
-@import "./base/fondation";
-@import "./base/typography";
-@import "./components/buttons";
-@import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";*/
+@import "Layout/header.scss";
+@import "Layout/footer.scss";
+@import "Utils/mixins.scss";
 
-/*Couleurs*/  
-$primary-color:#9356DC;
-$secondary-color:#FF79DA;
-$tertiary-color:#99E2D0;
 
-/*Boutons violets*/
-@mixin bouton_pink {
-    background-color:$primary-color;
-    color: #fff;
-    border-radius: 6rem;
-    //box-shadow: 20px green;
-   
+/*Bordure du body*/
+body {
+  margin: 0;
+  background-color: $primary-color;
+}
+
+.btn_explorer{
+@include bouton_pink(orange, green);
 }
 
 
 
 
-html {
-    box-sizing: border-box;
-    font-family:"shrikhand";
-    font-weight: 900;
-    color:red;
-    .container {
-      max-width: 576px;
-      margin: 0 auto;
-      overflow-x: hidden;
-      padding-left: 20px;
-      padding-right: 20px; 
-    }
-    .first_title {
-      width: 150px;
-    }
-    // test //
-  }
-  
-  
 
+
+/*Mise en page*/
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
   /*
-    .typography {
-        color: $colour-primary;
-        font-size: 2rem;
-        font-weight: 100;
-        line-height: 1.7;
-      }
-      h1 {
-      @extend .typography;
-      }
-  Couleurs
-  primaire violet: #9356DC
-  secondaire rose: #FF79DA
-  tertiare vert d'eau:#99E2D0 
-  
-  
-  
-  h1{
-      font-family: 'roboto';
-      font-size: small;
-      font-weight: 200;
-      
-  }
-  h2{
-      font-family:'shrikhand';
-  }
+  font-family: "shrikhand";
+  font-weight: 900;
+  color: green;
   */
+}
+html .container {
+  max-width: 576px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "roboto";
+}
+
+/*Couleurs*/
+/*Boutons violets*/
+.btn_explorer {
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 6rem;
+  box-shadow: 20px blue;
+}
+/*grey background + Logo localisation*/
+#background_grey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #edf2f4;
+  height: 50px;
+  border: 1px solid #eeeeee;
+}
+.destination{
+  position: relative;
+  left:10px;
+}
+/*Light grey background*/
+#background_light_grey{
+  background-color: #F2F2F2;
+  height: 150px;
   
-  /* SASS
-  .parent {
-      font-size: 1.5rem;
-      padding: 2rem;
-      background-color: #15DEA5;
-      color: #fff;
-      text-align: center;
-      border-radius: 2rem;
-      .child {
-      padding: 1rem;
-      background-color: #19647E;
-      margin-top: 1rem;
-      border-radius: 10rem;
-      }
-    }
+}
+/*Second Title*/
+.second_title{
+  font-weight: 900;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/*Liste Restaurants*/
+#wrapper-all-restaurants {
+  display: flex;
+  gap: 30px;
+}
+/*Fond gris restaurants*/
+#wrapper-area {
+  padding: 10px 30px 10px 30px;
+  border-radius: 15px;
+  background: #F2F2F2;
+  margin-top: 10px;
+  width: 100%;
+  height: 1240px;
+}
+
+/*Taille images cartes*/
+#flex-area a img {
+  object-fit: cover;
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px 0 0;
+  background: #fff;
+  box-shadow: 1px 0px 3px 0px rgb(158 158 158);
+}
+/*Selection ensemble sans l'image*/
+#flex-area a *:not(img) {
+  margin-left: 5px;
+  display: flex;
+  line-height: 1.5em;
   
-  .parent {
-    background-color: #15DEA5;
-    .descendant {
-        color: #fff;
-    }
-    >.child {
-        color: #D6FFF5;
-    }
-    +.adjacent {
-        color: #001534;
-    }
-  }
-  
-  
-  
-  
-  .block{
-    background-color: #15DEA5;
-    .block__element {
-        color: #fff;
-    }
-  
-  
-  OR
-  
-  .block{
-    background-color: #15DEA5;
-    &__element {
-        color: #fff;
-    }
-  }
-  
-  BEM
-     
-  .block{
-    background-color: #15DEA5;
-    .block__element {
-        color: #fff;
-    }
-  
-     .block__element--modifier {
-        background-color: #001534;
-    }
-  }
-  or 
-  
-  
-  
-  .block{
-    background-color: #15DEA5;
-    &__element {
-        color: #fff;
-          &--modifier {
-              background-color: #001534;
-    }
-    }
-  }
-  
-  
-   
-    
-  
-  
-    .btn {
-        display: inline-block;
-        margin: 0 auto;
-        background: #15DEA5;
-        padding: 1rem;
-      }
-      
-      .btn--disabled {
-        background: grey;
-      }
-      
-      .btn--outline {
-        background: transparent;
-        border: 2px solid #15DEA5;
-      }
-      
-      .btn--outline.btn--disabled {
-        border: 2px solid grey;
-      }
-  
-      =
-  
-  
-      .btn {
-            display: inline-block;
-            margin: 0 auto;
-            background: #15DEA5;
-            padding: 1rem;
-            &--disabled {
-                background: grey;
-            }
-          
-             &--outline {
-                background: transparent;
-                border: 2px solid #15DEA5;
-                &.btn--disabled{
-          
-                   border: 2px solid grey;
-                }
-            }
-          }
-  
-           
-  
-  
-  
-  
-  
-  
-           .btn {
-              padding: 1.5rem;
-              background: #15DEA5;
-              cursor: pointer;
-              border-radius: 100rem;
-              font-size: 1.5rem;
-              color: #fff;
-            
-              &--pink {
-                  background-color: #EA526F;
-              }
-            
-              &--outline {
-                background-color: unset;
-                border: 1px solid #15DEA5;
-                color: #15DEA5;
-            
-                &.btn--pink {
-                    color: #EA526F;
-                    border-color: #EA526F;
-                }
-              }
-            
-              
-            }
-  VARIABLES
-  
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:100,900i');
-  html, body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .container {
-    height: 100%;
+}
+/*Style et taille police cartes premier enfant*/
+#flex-area a span:first-of-type {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+/*Style et taille police cartes deuxieme enfant*/
+#flex-area a span:nth-of-type(2) {
+  font-size: 0.6rem;
+}
+
+
+
+
+#wrapper-area #flex-area {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  $color-primary:blue;
-  $color-secondary:#EA526F;
-  .btn {
-    padding: 1.5rem;
-    background: $color-primary;
-    cursor: pointer;
-    border-radius: 100rem;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+/*
+  .typography {
+      color: $colour-primary;
+      font-size: 2rem;
+      font-weight: 100;
+      line-height: 1.7;
+    }
+    h1 {
+    @extend .typography;
+    }
+Couleurs
+primaire violet: #9356DC
+secondaire rose: #FF79DA
+tertiare vert d'eau:#99E2D0 
+
+
+
+h1{
+    font-family: 'roboto';
+    font-size: small;
+    font-weight: 200;
+
+}
+h2{
+    font-family:'shrikhand';
+}
+*/
+/* SASS
+.parent {
     font-size: 1.5rem;
+    padding: 2rem;
+    background-color: #15DEA5;
     color: #fff;
-    &--pink {
-      background:$color-secondary;
-   
-  
-  
-  
-            */
+    text-align: center;
+    border-radius: 2rem;
+    .child {
+    padding: 1rem;
+    background-color: #19647E;
+    margin-top: 1rem;
+    border-radius: 10rem;
+    }
+  }
+
+.parent {
+  background-color: #15DEA5;
+  .descendant {
+      color: #fff;
+  }
+  >.child {
+      color: #D6FFF5;
+  }
+  +.adjacent {
+      color: #001534;
+  }
+}
+
+
+
+
+.block{
+  background-color: #15DEA5;
+  .block__element {
+      color: #fff;
+  }
+
+
+OR
+
+.block{
+  background-color: #15DEA5;
+  &__element {
+      color: #fff;
+  }
+}
+
+BEM
+   
+.block{
+  background-color: #15DEA5;
+  .block__element {
+      color: #fff;
+  }
+
+   .block__element--modifier {
+      background-color: #001534;
+  }
+}
+or 
+
+
+
+.block{
+  background-color: #15DEA5;
+  &__element {
+      color: #fff;
+        &--modifier {
+            background-color: #001534;
+  }
+  }
+}
+
+
+
+
+
+
+  .btn {
+      display: inline-block;
+      margin: 0 auto;
+      background: #15DEA5;
+      padding: 1rem;
+    }
+
+    .btn--disabled {
+      background: grey;
+    }
+
+    .btn--outline {
+      background: transparent;
+      border: 2px solid #15DEA5;
+    }
+
+    .btn--outline.btn--disabled {
+      border: 2px solid grey;
+    }
+
+    =
+
+
+    .btn {
+          display: inline-block;
+          margin: 0 auto;
+          background: #15DEA5;
+          padding: 1rem;
+          &--disabled {
+              background: grey;
+          }
+
+           &--outline {
+              background: transparent;
+              border: 2px solid #15DEA5;
+              &.btn--disabled{
+
+                 border: 2px solid grey;
+              }
+          }
+        }
+
+
+
+
+
+
+
+
+         .btn {
+            padding: 1.5rem;
+            background: #15DEA5;
+            cursor: pointer;
+            border-radius: 100rem;
+            font-size: 1.5rem;
+            color: #fff;
+
+            &--pink {
+                background-color: #EA526F;
+            }
+
+            &--outline {
+              background-color: unset;
+              border: 1px solid #15DEA5;
+              color: #15DEA5;
+
+              &.btn--pink {
+                  color: #EA526F;
+                  border-color: #EA526F;
+              }
+            }
+
+
+          }
+VARIABLES
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,900i');
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+$color-primary:blue;
+$color-secondary:#EA526F;
+.btn {
+  padding: 1.5rem;
+  background: $color-primary;
+  cursor: pointer;
+  border-radius: 100rem;
+  font-size: 1.5rem;
+  color: #fff;
+  &--pink {
+    background:$color-secondary;
+
+
+
+
+          */
+
+/*# sourceMappingURL=mobile.css.map */

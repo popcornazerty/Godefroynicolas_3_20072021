@@ -1,0 +1,21 @@
+@import "../Utils/variables.scss";
+
+/*Logo Principal*/
+header {
+    .first_title {
+        margin-top:0px;
+        #main_logo{
+            width: 150px;
+            margin: auto;
+            display: flex;
+        }
+       
+        padding: 10px;
+        box-shadow: -1px 5px 3px 0px rgba(0,0,0,0.10);
+        background-color: $secondary-color;
+    }
+}
+
+.destination {
+    font-size: $small !important;
+}

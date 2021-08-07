@@ -1,0 +1,26 @@
+footer {
+    .bloc_footer {
+        background-color:gray;
+        ul {
+            list-style: none;
+            padding-left: 0px;
+            display: inline-block;
+            height: 110px;
+            padding-left: 30px;
+            li {
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 0.9em;
+                    .icon-restaurant,
+                    .icon-partenaire {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .titre-pied-page {
+            margin-bottom: 5px;
+        }
+    }
+}

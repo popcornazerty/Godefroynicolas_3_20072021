@@ -1,0 +1,6 @@
+@mixin bouton_pink($background, $color) {
+    background-color:$background;
+    color: $color;
+    border-radius: 6rem;
+    box-shadow: 20px blue; 
+}

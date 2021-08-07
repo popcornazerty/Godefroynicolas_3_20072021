@@ -1,13 +1,20 @@
 {
-  "name": "joeblow",
+  "name": "godefroynicolas_3_20072021",
   "version": "1.0.0",
-  "description": "Joe Blow's web portfolio",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass ./sass/main.scss:./public/css/style.css -w --style compressed",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d./public/css/prefixed/"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch sass/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/popcornazerty/Godefroynicolas_3_20072021.git"
   },
   "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions"
-  }
+  "bugs": {
+    "url": "https://github.com/popcornazerty/Godefroynicolas_3_20072021/issues"
+  },
+  "homepage": "https://github.com/popcornazerty/Godefroynicolas_3_20072021#readme"
+}
