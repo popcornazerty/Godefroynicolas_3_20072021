@@ -1,6 +1,6 @@
 footer {
     .bloc_footer {
-        background-color:gray;
+        background-color:#353535;
         ul {
             list-style: none;
             padding-left: 0px;
@@ -12,6 +12,7 @@ footer {
                     color: white;
                     text-decoration: none;
                     font-size: 0.9em;
+                    font-family:$font;
                     .icon-restaurant,
                     .icon-partenaire {
                         margin-right: 5px;

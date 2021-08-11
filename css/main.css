@@ -14,7 +14,7 @@ header .first_title #main_logo {
 }
 
 footer .bloc_footer {
-  background-color: gray;
+  background-color: #353535;
 }
 footer .bloc_footer ul {
   list-style: none;
@@ -27,6 +27,7 @@ footer .bloc_footer ul li a {
   color: white;
   text-decoration: none;
   font-size: 0.9em;
+  font-family: "roboto";
 }
 footer .bloc_footer ul li a .icon-restaurant,
 footer .bloc_footer ul li a .icon-partenaire {
@@ -43,6 +44,7 @@ footer .bloc_footer .titre-pied-page {
     box-shadow: 20px; 
 }
 */
+/* Les couleurs */
 * {
   box-sizing: border-box;
 }
@@ -207,6 +209,23 @@ span {
   border-radius: 10px 10px 0 0;
 }
 
+.new_icon {
+  color: #1b6150;
+  font-size: 0.9rem;
+  padding: 3px 3px 0px 12px;
+  margin: 0;
+  background: #99e2d0;
+  display: flex;
+  position: relative;
+  width: 84px;
+  height: 25px;
+  bottom: 95px;
+  left: 236px;
+}
+
+.restaurant_cards{
+  display: grid;
+}
 /*
   .typography {
       color: $colour-primary;

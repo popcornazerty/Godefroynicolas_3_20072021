@@ -1,6 +1,9 @@
 @import "Layout/header.scss";
 @import "Layout/footer.scss";
+@import "Layout/form.scss";
 @import "Utils/mixins.scss";
+@import "Utils/variables";
+
 
 * {
   box-sizing: border-box;
@@ -30,7 +33,7 @@ html .container {
   max-width: 576px;
   margin: 0 auto;
   overflow-x: hidden;
-  font-family: "roboto";
+  font-family: $font;
 }
 
 /*Couleurs*/
@@ -94,7 +97,7 @@ span{
       box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%);
     }
     .circle_number{
-      background-color: #9356DC;
+      background-color:$primary-color;
       color: white;
       position: absolute;
       padding: 3px 8px 3px 8px;
@@ -164,6 +167,9 @@ padding: 10px 20px 10px 20px;
   border-radius: 10px 10px 0 0;
 }
 
+.new_icon{
+  @include icon
+  }
 /*
   .typography {
       color: $colour-primary;
