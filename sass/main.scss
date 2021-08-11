@@ -2,15 +2,13 @@
 @import "Layout/footer.scss";
 @import "Utils/mixins.scss";
 
-
+* {
+  box-sizing: border-box;
+}
 /*Bordure du body*/
 body {
   margin: 0;
-  background-color: $primary-color;
-}
-
-.btn_explorer{
-@include bouton_pink(orange, green);
+ 
 }
 
 
@@ -19,7 +17,7 @@ body {
 
 
 /*Mise en page*/
-@charset "UTF-8";
+
 html {
   box-sizing: border-box;
   /*
@@ -32,27 +30,23 @@ html .container {
   max-width: 576px;
   margin: 0 auto;
   overflow-x: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
   font-family: "roboto";
 }
 
 /*Couleurs*/
 /*Boutons violets*/
-.btn_explorer {
-  background-color: #9356DC;
-  color: #fff;
-  border-radius: 6rem;
-  box-shadow: 20px blue;
-}
+.btn_location{
+  @include btn
+  }
 /*grey background + Logo localisation*/
 #background_grey {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #edf2f4;
+  background-color: #eaeaea;
   height: 50px;
   border: 1px solid #eeeeee;
+  width: 100%;
 }
 .destination{
   position: relative;
@@ -60,66 +54,116 @@ html .container {
 }
 /*Light grey background*/
 #background_light_grey{
-  background-color: #F2F2F2;
-  height: 150px;
-  
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 230px;
 }
 /*Second Title*/
 .second_title{
   font-weight: 900;
   font-size: 1.2em;
   text-align: center;
+  .text_align_left{
+  text-align: left;
+  }
+}
+/*element span*/
+span{
+  text-align: center;
+
+}
+/*Filtres choix restaurant*/
+.filter_bloc{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+    .filter{
+      
+      display: flex;
+      align-items: center;
+      background: #f6f6f6;
+      height: 50px;
+      width: auto;
+      margin: 10px 20px;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%);
+    }
+    .circle_number{
+      background-color: #9356DC;
+      color: white;
+      position: absolute;
+      padding: 3px 8px 3px 8px;
+      border-radius: 50px;
+      transform: translate(-9px);
+    }
+    .icon_filter{
+      position: relative;
+      left:40px;
+      color:#7f7f7e;
+    }
+    .choice{
+      position: absolute;
+      left: 70px;
+    }
+ 
+    
+//Liste restaurants
+
+.wrapper_all_restaurants{
+background:#f6f6f6;
+padding: 10px 20px 10px 20px;
+    width: 100%;
+    //height: 420px;
+    //position: relative;
+    margin-top: 10px;
+.restaurant_title{
+  color:red;
+  .restaurant_cards{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .a{
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: #ffffff;
+    padding: 3px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 3px 0px rgb(158 158 158);
+    display: flex;
+      }
+    }
+  }
 }
 
-/*Liste Restaurants*/
-#wrapper-all-restaurants {
-  display: flex;
-  gap: 30px;
-}
-/*Fond gris restaurants*/
-#wrapper-area {
-  padding: 10px 30px 10px 30px;
-  border-radius: 15px;
-  background: #F2F2F2;
-  margin-top: 10px;
+.restaurant_cards a{
+  text-decoration: none;
+  color: #000000;
   width: 100%;
-  height: 1240px;
+  height: 180px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px 0px 3px 0px rgb(158 158 158);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
-/*Taille images cartes*/
-#flex-area a img {
+.restaurant_cards a img{
   object-fit: cover;
   width: 100%;
   height: 60%;
   border-radius: 10px 10px 0 0;
-  background: #fff;
-  box-shadow: 1px 0px 3px 0px rgb(158 158 158);
-}
-/*Selection ensemble sans l'image*/
-#flex-area a *:not(img) {
-  margin-left: 5px;
-  display: flex;
-  line-height: 1.5em;
-  
-}
-/*Style et taille police cartes premier enfant*/
-#flex-area a span:first-of-type {
-  font-weight: bold;
-  font-size: 0.7rem;
-}
-/*Style et taille police cartes deuxieme enfant*/
-#flex-area a span:nth-of-type(2) {
-  font-size: 0.6rem;
 }
 
-
-
-
-#wrapper-area #flex-area {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 /*
   .typography {
       color: $colour-primary;
