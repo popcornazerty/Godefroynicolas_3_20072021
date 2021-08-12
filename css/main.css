@@ -224,8 +224,19 @@ span {
 }
 
 .restaurant_cards{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap:23px;
 }
+
+
+/*.restaurant_cards a *:not(.new_icon, img){
+  margin-left: 5px;
+  display: flex;
+  line-height: 1.5em;
+}
+*/ 
+
 /*
   .typography {
       color: $colour-primary;
