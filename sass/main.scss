@@ -47,8 +47,29 @@ html .container {
 /*Couleurs*/
 /*Boutons violets*/
 .btn_location{
+  @include btn;  
+&:hover{
+opacity: 0.8;
+cursor: pointer;
+transition: .3s;
+box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
+}
+}
+
+/*
+.btn_location{
   @include btn
-  }
+}
+.btn_location:hover{
+opacity: 0.8;
+cursor: pointer;
+transition: .3s;
+box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
+}
+*/
+
+
+
 /*grey background + Logo localisation*/
 #background_grey {
   display: flex;
@@ -121,8 +142,23 @@ span{
       position: absolute;
       left: 70px;
     }
- 
-    
+ /*Hover couleur*/
+ .filter:hover {
+  background:#f5edff;
+  opacity: 0.8;
+  cursor: pointer;
+  transition-duration:0.8s;
+  box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+ }  
+/*
+
+
+
+
+0 0.5em 0.5em -0.4em var(--hover)
+
+*/
+
 //Liste restaurants
 
 .wrapper_all_restaurants{
@@ -157,15 +193,42 @@ flex-direction: column;
   height: 60%;
   border-radius: 10px 10px 0 0;
 }
-.text_wrap{
+.text_block{
   display:flex;
   flex-direction: column;
   align-items: flex-start;
-  transform:translate(13px,-8px) ;
+  transform:translate(13px,-8px);
 }  
 .new_icon{
   @include icon
   }
+/*Coeur like*/
+
+.block_heart .heart_full{
+  position: absolute;
+  fill:url(#heart_color);
+  stroke:none;
+}
+.block_heart .heart_empty{
+  stroke-width: 20px;
+  stroke: black;
+  fill: white;
+  cursor: pointer;
+}
+.block_heart{
+  width: 20px;
+  position: relative;
+}
+
+
+.heart:hover{
+
+    background:linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+    opacity: 0.8;
+    cursor: pointer;
+    transition-duration:0.8s;
+    box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+   } 
 
 /*
   .typography {
