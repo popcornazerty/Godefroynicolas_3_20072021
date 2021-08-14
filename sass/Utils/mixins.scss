@@ -16,18 +16,20 @@
     height: 50px;
 }
 
-@mixin icon{
-    color: #1b6150;
-    font-size: 0.9rem;
+@mixin icon($size,$color){
+    color: $color;
+    font-size: $size;
     padding: 3px 3px 0px 12px;
     margin: 0;
-    background:#99e2d0; 
-    display: flex;
-    position: relative;
-    width:84px;
+    padding-right: 5px; 
     height:25px;
-    bottom: 95px;
-    left:236px;
+    display: flex;
+    justify-content: flex-end;
+    span {
+        background:#99e2d0;
+        padding: 5px;
+        border-radius: 2px;
+    }
 }
 
 

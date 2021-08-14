@@ -124,7 +124,18 @@ span{
       border-radius: 20px;
       position: relative;
       box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%);
-    }
+
+      &:hover{
+          background:#f5edff;
+          opacity: 0.8;
+          cursor: pointer;
+          transition-duration:0.8s;
+          box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+          .icon_filter{
+            color:#9356DC;   
+          }
+          .choice { font-weight: bold;}
+      }
     .circle_number{
       background-color:$primary-color;
       color: white;
@@ -142,14 +153,8 @@ span{
       position: absolute;
       left: 70px;
     }
- /*Hover couleur*/
- .filter:hover {
-  background:#f5edff;
-  opacity: 0.8;
-  cursor: pointer;
-  transition-duration:0.8s;
-  box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
- }  
+    }
+ /*Hover couleur*/ 
 /*
 
 
@@ -176,12 +181,15 @@ flex-direction: column;
   text-decoration: none;
   color: #000000;
   width: 100%;
-  height: 180px;
+  height: 200px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 1px 0px 3px 0px rgb(158 158 158);
   display: flex;
   flex-direction: column;
+  &:hover{
+    box-shadow:0px 0px 10px 0px rgb(158, 45, 80,0.5);
+  }
 }
 .restaurant_card_effect{
   display: flex;
@@ -193,14 +201,19 @@ flex-direction: column;
   height: 60%;
   border-radius: 10px 10px 0 0;
 }
-.text_block{
+.toto{
   display:flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transform:translate(13px,-8px);
+  justify-content:space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
 }  
+.area_restaurant {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 .new_icon{
-  @include icon
+  @include icon(0.9rem, #1b6150)
   }
 /*Coeur like*/
 
@@ -215,7 +228,7 @@ flex-direction: column;
   fill: white;
   cursor: pointer;
 }
-.block_heart{
+.block_heart, .heart_empty{
   width: 20px;
   position: relative;
 }
@@ -223,13 +236,12 @@ flex-direction: column;
 
 .heart:hover{
 
-    background:linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-    opacity: 0.8;
+    fill:linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+    opacity: 0.2;
     cursor: pointer;
     transition-duration:0.8s;
     box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
    } 
-
 /*
   .typography {
       color: $colour-primary;
