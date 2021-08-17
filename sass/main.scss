@@ -244,6 +244,14 @@ flex-direction: column;
     transition-duration:0.8s;
     box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
    } 
+
+
+
+   /*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
+   .font_img_menilmontant{
+   @include font_img_restaurant
+   }
+
 /*
   .typography {
       color: $colour-primary;
