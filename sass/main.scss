@@ -16,8 +16,11 @@ body {
 }
 
 /*Titles*/
-h2{
+h2.reserver_menu_title{
   text-align: center;
+  &.title_menu_card{
+  font-family: 'shrikhand', cursive;
+  }
 }
 h3 {
   margin-left: 20px;
@@ -252,11 +255,14 @@ flex-direction: column;
 .font_img_menilmontant{
   @include font_img_restaurant
 }
-
+/*block page fond*/
 .font_menu{
   @include font_menu
 }
-
+/*titre la palette du gout*/
+.title_menu{
+  font-family: "Shrikhand", cursive;
+}
 
 /*
   .typography {
