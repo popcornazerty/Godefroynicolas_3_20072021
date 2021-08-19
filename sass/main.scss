@@ -247,10 +247,16 @@ flex-direction: column;
 
 
 
-   /*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
-   .font_img_menilmontant{
-   @include font_img_restaurant
-   }
+/*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
+/* image fond restaurant*/
+.font_img_menilmontant{
+  @include font_img_restaurant
+}
+
+.font_menu{
+  @include font_menu
+}
+
 
 /*
   .typography {

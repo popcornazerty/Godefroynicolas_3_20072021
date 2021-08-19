@@ -19,9 +19,13 @@ header .first_title #main_logo {
   left: 25px;
   text-decoration: none;
 }
+.fa-arrow-left:before a:visited {
+  color: black;
+}
 
 footer .bloc_footer {
   background-color: #353535;
+  display: flex;
 }
 footer .bloc_footer ul {
   list-style: none;
@@ -52,6 +56,7 @@ footer .bloc_footer .titre-pied-page {
     box-shadow: 20px; 
 }
 */
+/*correct?*/
 /* Les couleurs */
 * {
   box-sizing: border-box;
@@ -320,11 +325,20 @@ span {
 }
 
 /*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
+/* image fond restaurant*/
 .font_img_menilmontant {
   width: 100%;
   height: 135px;
   object-fit: cover;
   transform: scaleY(1.3);
+}
+
+.font_menu {
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1230px;
+  border-radius: 30px 30px 0 0;
+  background-color: #F6F6F6;
 }
 
 /*
