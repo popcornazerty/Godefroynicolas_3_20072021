@@ -362,17 +362,32 @@ span {
 }
 
 /*Entrées,Plats,Desserts*/
-.starters, .main_course, .desserts {
+.menu_subtitle {
   text-transform: uppercase;
+  font-weight: 100;
+}
+.menu_subtitle::after {
+  content: "";
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  border-bottom: 2px solid #99e2d0;
+  left: 21px;
+}
+
+/*Blocs encadrement*/
+.filter_starters {
+  margin-top: 20px;
 }
 
 /*Encadrement entrées*/
-.starter_1, .starter_2, .starter_3 {
+.starters {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   background: #ffffff;
-  height: 50px;
+  height: 60px;
   width: auto;
   margin: 10px 0px;
   border-radius: 10px;
@@ -380,13 +395,13 @@ span {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
 }
 
-/*textes entrées gras*/
-.starter_bold, .starter_light {
+/*textes gras*/
+.menu_bold, .menu_light, .menu_price {
   font-weight: 700;
   font-size: 0.9rem;
   text-align: initial;
 }
-.starter_bold.starter_light, .starter_light.starter_light {
+.menu_bold.menu_light, .menu_light.menu_light, .menu_price.menu_light {
   font-weight: 100;
 }
 
