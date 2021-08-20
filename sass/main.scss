@@ -51,7 +51,7 @@ html  {
 /*Couleurs*/
 /*Boutons violets*/
 .btn_location{
-  @include btn;  
+  @include btn(50px,190px);  
 
 }
 
@@ -270,6 +270,15 @@ flex-direction: column;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+/*Bouton Order*/
+.order_btn {
+  @include btn (40px,150px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-left: 85px;
+  margin-top: 20px;
 }
 /*
   .typography {
