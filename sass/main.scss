@@ -271,6 +271,34 @@ flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
+/*Entrées,Plats,Desserts*/
+.starters,.main_course,.desserts{
+  text-transform: uppercase;
+}
+/*Encadrement entrées*/
+.starter_1,.starter_2,.starter_3{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ffffff;
+  height: 50px;
+  width: auto;
+  margin: 10px 0px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%); 
+}
+/*textes entrées gras*/
+.starter_bold,.starter_light{
+font-weight: 700;
+font-size: 0.9rem;
+text-align: initial; 
+&.starter_light{
+  font-weight: 100;
+}
+}
+/*textes entrées light*/
+
 /*Bouton Order*/
 .order_btn {
   @include btn (40px,150px);
