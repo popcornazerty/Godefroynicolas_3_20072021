@@ -4,10 +4,41 @@
 @import "Utils/mixins.scss";
 @import "Utils/variables";
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
+
+
 
 * {
   box-sizing: border-box;
 }
+/*Spinner*/
+.loader {
+
+  border-radius: 50%;
+  border-top: 16px ridge #9356dc;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear;
+  position: absolute;
+  top:50%;
+  left:32%;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 1;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg);
+  visibility: visible;
+  opacity: 100%;}
+  100% { transform: rotate(360deg);
+  visibility: hidden;
+  opacity: 0%; }
+}
+
+
+
 
 /*Bordure du body*/
 body {
@@ -18,10 +49,12 @@ body {
 /*Titles*/
 h2.reserver_menu_title{
   text-align: center;
-  &.menu_title_card{
-  font-family: 'shrikhand', cursive;
+}  
+  .menu_title_card {
+    font-family:'Shrikhand';
   }
-}
+
+
 h3 {
   margin-left: 20px;
 }
@@ -252,6 +285,10 @@ flex-direction: column;
 
 
 /*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
+/*font menu*/
+#menu{
+  background-color: #f6f6f6;
+}
 /* image fond restaurant*/
 .font_img_menilmontant{
   @include font_img_restaurant
@@ -273,45 +310,16 @@ flex-direction: column;
 }
 /*Entrées,Plats,Desserts*/
 .menu_subtitle{
-  text-transform: uppercase;
-  font-weight: 100;
-  &::after{
-    content: '';
-    width: 30px;
-    height: 20px;
-    position: absolute;
-    border-bottom: 2px solid #99e2d0 ;
-    left:21px;
-     
-  }
+  @include menu_title;
 }
-/*Blocs encadrement*/
-.filter_starters{
-  margin-top: 20px;
-}
+
 /*Encadrement entrées*/
-.starters{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  height: 60px;
-  width: auto;
-  margin: 10px 0px;
-  border-radius: 10px;
-  position: relative;
-  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%); 
+.starters, .main_course_1,.desserts_1{
+@include card_menu(10px,10px,100);
 }
-/*textes gras*/
-.menu_bold,.menu_light,.menu_price{
-font-weight: 700;
-font-size: 0.9rem;
-text-align: initial; 
-&.menu_light{
-  font-weight: 100;
-  }
-}
+
+
+
 /*textes entrées light*/
 
 /*Bouton Order*/

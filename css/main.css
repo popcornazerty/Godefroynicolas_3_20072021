@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Les couleurs */
 /*Logo Principal*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
 header .first_title {
   margin: 4px 0px 11px 0px;
   padding: 10px;
@@ -61,6 +62,33 @@ footer .bloc_footer .titre-pied-page {
   box-sizing: border-box;
 }
 
+/*Spinner*/
+.loader {
+  border-radius: 50%;
+  border-top: 16px ridge #9356dc;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear;
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    visibility: visible;
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    visibility: hidden;
+    opacity: 0%;
+  }
+}
 /*Bordure du body*/
 body {
   margin: 0;
@@ -70,8 +98,9 @@ body {
 h2.reserver_menu_title {
   text-align: center;
 }
-h2.reserver_menu_title.menu_title_card {
-  font-family: "shrikhand", cursive;
+
+.menu_title_card {
+  font-family: "Shrikhand";
 }
 
 h3 {
@@ -329,6 +358,11 @@ span {
 }
 
 /*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
+/*font menu*/
+#menu {
+  background-color: #f6f6f6;
+}
+
 /* image fond restaurant*/
 .font_img_menilmontant {
   width: 100%;
@@ -365,44 +399,40 @@ span {
 .menu_subtitle {
   text-transform: uppercase;
   font-weight: 100;
+  margin-bottom: 10px;
 }
 .menu_subtitle::after {
   content: "";
-  width: 30px;
+  width: 35px;
   height: 20px;
   position: absolute;
-  border-bottom: 2px solid #99e2d0;
+  border-bottom: 3px solid #99e2d0;
   left: 21px;
 }
 
-/*Blocs encadrement*/
-.filter_starters {
-  margin-top: 20px;
-}
-
 /*Encadrement entrées*/
-.starters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+.starters, .main_course_1, .desserts_1 {
   background: #ffffff;
-  height: 60px;
+  margin-bottom: 10px;
   width: auto;
-  margin: 10px 0px;
+  padding: 10px;
   border-radius: 10px;
   position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
 }
-
-/*textes gras*/
-.menu_bold, .menu_light, .menu_price {
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-align: initial;
+.starters .menu_bold, .main_course_1 .menu_bold, .desserts_1 .menu_bold {
+  display: block;
+  text-align: left;
 }
-.menu_bold.menu_light, .menu_light.menu_light, .menu_price.menu_light {
+.starters .menu_price, .main_course_1 .menu_price, .desserts_1 .menu_price {
+  float: right;
+}
+.starters .menu_light, .main_course_1 .menu_light, .desserts_1 .menu_light {
   font-weight: 100;
+}
+.starters span, .main_course_1 span, .desserts_1 span {
+  padding: 0;
+  font-size: 0.9rem;
 }
 
 /*textes entrées light*/
