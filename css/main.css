@@ -25,13 +25,11 @@ header .first_title #main_logo {
 
 footer .bloc_footer {
   background-color: #353535;
-  display: flex;
 }
 footer .bloc_footer ul {
   list-style: none;
   padding-left: 0px;
   display: inline-block;
-  height: 110px;
   padding-left: 30px;
 }
 footer .bloc_footer ul li a {
@@ -126,7 +124,6 @@ html {
 }
 
 html {
-  max-width: 576px;
   margin: 0 auto;
   overflow-x: hidden;
   font-family: "roboto";
@@ -349,7 +346,7 @@ span {
 }
 
 .block_heart, .heart_empty {
-  width: 20px;
+  width: 26px;
   position: relative;
 }
 
@@ -370,9 +367,9 @@ span {
 /* image fond restaurant*/
 .font_img_menilmontant {
   width: 100%;
-  height: 200px;
+  height: 245px;
   object-fit: cover;
-  transform: scaleY(1.3);
+  margin-top: -29px;
 }
 
 /*block page fond*/
@@ -397,6 +394,7 @@ span {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-right: 4%;
 }
 
 /*Entrées,Plats,Desserts*/
@@ -415,28 +413,51 @@ span {
 }
 
 /*Encadrement entrées*/
-.starters, .main_course_1, .desserts_1 {
+.starters, .main_course, .desserts {
   background: #ffffff;
   margin-bottom: 10px;
   width: auto;
-  padding: 10px;
+  padding: 15px;
+  padding-right: 20px;
   border-radius: 10px;
   position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
 }
-.starters .menu_bold, .main_course_1 .menu_bold, .desserts_1 .menu_bold {
+.starters .menu_bold, .main_course .menu_bold, .desserts .menu_bold {
   display: block;
   text-align: left;
 }
-.starters .menu_price, .main_course_1 .menu_price, .desserts_1 .menu_price {
+.starters .menu_price, .main_course .menu_price, .desserts .menu_price {
   float: right;
 }
-.starters .menu_light, .main_course_1 .menu_light, .desserts_1 .menu_light {
+.starters .menu_light, .main_course .menu_light, .desserts .menu_light {
   font-weight: 100;
 }
-.starters span, .main_course_1 span, .desserts_1 span {
+.starters span, .main_course span, .desserts span {
   padding: 0;
   font-size: 0.9rem;
+}
+
+/*Bloc menu*/
+.bloc_menu {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+/*slide validation*/
+.box_flex {
+  position: absolute;
+  background: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  right: 0px;
+  padding: 0 13px;
+  height: 100%;
+}
+.box_flex.box_flex i {
+  font-size: 30px;
+  color: white;
+  transform: rotate(180deg);
+  animation: rotate 0.5s both;
 }
 
 /*textes entrées light*/
@@ -447,19 +468,23 @@ span {
   border-radius: 6rem;
   border: none;
   box-shadow: 1px 10px 20px -2px rgba(0, 0, 0, 0.18);
-  width: 150px;
-  height: 40px;
+  width: 160px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 85px;
-  margin-top: 20px;
+  margin: auto;
 }
 .order_btn:hover {
   filter: brightness(1.1);
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+}
+
+/*FOOTER*/
+footer ul li {
+  margin-top: 5px;
 }
 
 /*

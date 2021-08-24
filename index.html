@@ -5,13 +5,14 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel="stylesheet" href="css/main.css"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-
+      <title>ohmyfood</title>
     </head>
     <body>
+      <div class="container">      
 <!--CSS SPINNER-->
-
-<div class="loader"></div>
- 
+<div class="wrapper_loader">
+  <div class="loader"></div>
+</div>
   
        <header>
             <h1 class="first_title">
@@ -20,20 +21,21 @@
             </h1>
         </header>
         
-        <div class="container">
+        
             <section>   
-                <class id="background_grey" for="marecherche">
+                <div id="background_grey">
                     <i id="icon_research" class="fas fa-map-marker-alt fa-xs"></i>
-                    <div class="destination"> Paris, Belleville </div> <class/> 
+                    <div class="destination"> Paris, Belleville </div> 
+                  </div>     
             </section>
             <section>
-                <class id="background_light_grey">
-                    <h2 class="reserver_menu_title">Réserver le menu qui </br> vous convient</h2>
+                <div id="background_light_grey">
+                    <h2 class="reserver_menu_title">Réserver le menu qui <br> vous convient</h2>
                     <span>Découvrez des restaurants d'exception, séléectionnés par nos soins.</span>
                     <div class="search_form">
                         <button class="btn_location">Explorer nos restaurants</button>
                     </div> 
-                </class>    
+                  </div>    
             </section>
             <h3 class="subtitle" id="fonctionnement_title">Fonctionnement</h3>
             <div class="filter_bloc">
@@ -79,7 +81,7 @@
                                      s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
                                      C512,93.417,453.532,30,376,30z"></path>
                           <defs>
-                            <linearGradient id="heart_color">
+                            <linearGradient>
                                   <stop offset="0%" stop-color="#9356DC"></stop>
                                   <stop offset="100%" stop-color="#FF79DA"></stop>
                             </linearGradient>
@@ -129,7 +131,7 @@
                                      s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
                                      C512,93.417,453.532,30,376,30z"></path>
                           <defs>
-                            <linearGradient id="heart_color">
+                            <linearGradient class="heart_color">
                                   <stop offset="0%" stop-color="#9356DC"></stop>
                                   <stop offset="100%" stop-color="#FF79DA"></stop>
                             </linearGradient>
@@ -142,7 +144,7 @@
                                    s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
                                    C512,93.417,453.532,30,376,30z"></path>
                         <defs>
-                          <linearGradient>
+                          <linearGradient id="heart_color">
                                 <stop offset="0%" stop-color="#9356DC"></stop>
                                 <stop offset="100%" stop-color="#FF79DA"></stop>
                           </linearGradient>
@@ -192,7 +194,7 @@
                                    s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
                                    C512,93.417,453.532,30,376,30z"></path>
                         <defs>
-                          <linearGradient>
+                          <linearGradient id="heart_color">
                                 <stop offset="0%" stop-color="#9356DC"></stop>
                                 <stop offset="100%" stop-color="#FF79DA"></stop>
                           </linearGradient>
@@ -261,6 +263,7 @@
                         <span>Nouveau</span>
                       </div> 
                     </a>
+                  </div>  
                 </section> 
                   
         </div>    

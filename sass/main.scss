@@ -79,7 +79,7 @@ html {
   */
 }
 html  {
-  max-width: 576px;
+ 
   margin: 0 auto;
   overflow-x: hidden;
   font-family: $font;
@@ -265,6 +265,7 @@ flex-direction: column;
   fill:url(#heart_color);
   stroke:none;
 }
+
 .block_heart .heart_empty{
   stroke-width: 20px;
   stroke: black;
@@ -272,7 +273,7 @@ flex-direction: column;
   cursor: pointer;
 }
 .block_heart, .heart_empty{
-  width: 20px;
+  width: 26px;
   position: relative;
 }
 
@@ -311,6 +312,7 @@ flex-direction: column;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-right: 4%;
 }
 /*Entrées,Plats,Desserts*/
 .menu_subtitle{
@@ -318,22 +320,47 @@ flex-direction: column;
 }
 
 /*Encadrement entrées*/
-.starters, .main_course_1,.desserts_1{
-@include card_menu(10px,10px,100);
+.starters, .main_course,.desserts{
+@include card_menu(15px,20px,10px,100);
 }
+/*Bloc menu*/
+.bloc_menu{
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+/*slide validation*/
+.box_flex{
 
+position: absolute;
+background: #99E2D0;
+border-radius: 0 15px 15px 0;
+right: 0px;
+padding: 0 13px;
+height: 100%;
+&.box_flex i{
+  font-size: 30px;
+    color: white;
 
-
+    transform: rotate(
+180deg
+);
+    animation: rotate 0.5s both;
+}
+}
 /*textes entrées light*/
 
 /*Bouton Order*/
 .order_btn {
-  @include btn (40px,150px);
+  @include btn (50px,160px);
   display:flex;
   justify-content:center;
   align-items:center;
-  margin-left: 85px;
-  margin-top: 20px;
+  margin:auto;
+  
+}
+/*FOOTER*/
+footer ul li {
+  margin-top: 5px;
 }
 /*
   .typography {
