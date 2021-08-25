@@ -330,16 +330,10 @@ flex-direction: column;
   }
 }
 
-@keyframes rotate {
-  0% {
-      transform: rotate(0);
-}
-100% {
-      transform: rotate(360deg);
-  }
-}
+
+
 .menu_price{
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-name:slidein;
 }
 @keyframes slidein {
@@ -350,7 +344,6 @@ flex-direction: column;
             transform: scaleX(-50px);
   }
 }
-
 
 /*Bloc menu*/
 .bloc_menu{
@@ -371,7 +364,6 @@ height: 100%;
 &.box_flex i{
   font-size: 30px;
     color: white;
-
     transform: rotate(
 180deg
 );
