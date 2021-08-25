@@ -1,0 +1,7 @@
+@media screen and (min-width: 800px)
+.process__steps {
+ 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;

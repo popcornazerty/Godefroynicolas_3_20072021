@@ -56,6 +56,20 @@ footer .bloc_footer .titre-pied-page {
 */
 /*correct?*/
 /* Les couleurs */
+/*Responsive desktop*/
+/*Filtres Fonctionnement*/
+@media screen and (min-width: 800px) {
+  .filter_bloc {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .wrapper_all_restaurants .restaurant_cards {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -99,6 +113,7 @@ body {
 /*Titles*/
 h2.reserver_menu_title {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .menu_title_card {
@@ -139,6 +154,12 @@ html {
   box-shadow: 1px 10px 20px -2px rgba(0, 0, 0, 0.18);
   width: 190px;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 50px;
 }
 .btn_location:hover {
   filter: brightness(1.1);
@@ -179,9 +200,9 @@ box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 60%);
 #background_light_grey {
   background-color: #f6f6f6;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  height: 230px;
+  height: 300px;
   margin-bottom: 50px;
 }
 
@@ -445,16 +466,8 @@ span {
   animation: opacity 1s both;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .menu_price {
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-name: slidein;
 }
 
