@@ -438,18 +438,48 @@ span {
   font-size: 0.9rem;
 }
 
+.starters {
+  animation-delay: 0.1s;
+}
+.starters.box_1 {
+  animation: opacity 1s both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu_price {
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-50px);
+  }
+}
 /*Bloc menu*/
 .bloc_menu {
   padding-top: 10px;
   padding-bottom: 30px;
+  cursor: pointer;
 }
 
 /*slide validation*/
 .box_flex {
   position: absolute;
   background: #99E2D0;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 10px 10px 0;
   right: 0px;
+  top: 0px;
   padding: 0 13px;
   height: 100%;
 }
@@ -458,6 +488,8 @@ span {
   color: white;
   transform: rotate(180deg);
   animation: rotate 0.5s both;
+  position: relative;
+  top: 15px;
 }
 
 /*textes entrées light*/
