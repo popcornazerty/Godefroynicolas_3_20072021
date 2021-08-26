@@ -29,7 +29,7 @@
   border-top: 16px ridge #9356dc;
   height: 120px;
   width: 120px;
-  animation: spin 4s linear;
+  animation: loader 4s linear;
   position: absolute;
   top:0;
   right:0;
@@ -43,7 +43,7 @@
 }
 
 
-@keyframes spin {
+@keyframes loader {
   0% { transform: rotate(0deg);
   visibility: visible;
   opacity: 100%;}
@@ -338,25 +338,14 @@ flex-direction: column;
 }
 .starters{
   animation-delay: 0.1s;
-  &.box_1{
-    animation: opacity 1s both;
-  }
+  animation: opacity 1s both;
+ 
 }
 
 
 
-.menu_price{
-  animation-duration: 2s;
-  animation-name:slidein;
-}
-@keyframes slidein {
-  0% {
-            transform: scaleX(0);
-  }
-  100% {
-            transform: scaleX(-50px);
-  }
-}
+
+
 
 /*Bloc menu*/
 .bloc_menu{
@@ -366,7 +355,6 @@ flex-direction: column;
 }
 /*slide validation*/
 .box_flex{
-
 position: absolute;
 background: #99E2D0;
 border-radius: 0 10px 10px 0;
@@ -384,7 +372,45 @@ height: 100%;
     position: relative;
     top:15px;
   }
+  &:hover .box_flex{
+    animation: slidein 0.5s ease ;
+    transform-origin: right; 
+  }
+  &:hover .menu_price{
+    padding-right: 50px;
+    transition: 0.5 ease;
+  }
 }
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0);
+}
+100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes slidein {
+  0% {
+            transform: scaleX(0);
+  }
+  100% {
+            transform: scaleX(-50px);
+  }
+}
+
+ 
+@keyframes opacity {
+  0% {
+            opacity: 0;
+  }
+  100% {
+            opacity: 1;
+  }
+}
+
+
 
 /*textes entrées light*/
 
