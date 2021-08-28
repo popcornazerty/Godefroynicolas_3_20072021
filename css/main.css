@@ -105,6 +105,34 @@ footer .bloc_footer .titre-pied-page {
     opacity: 0%;
   }
 }
+@keyframes wrapper {
+  0% {
+    visibility: visible;
+    opacity: 70%;
+  }
+  60% {
+    opacity: 70%;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0%;
+  }
+}
+/*Conteneur wrapper*/
+.wrapper_loader {
+  height: 100%;
+  background: white;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  animation: wrapper 4s linear;
+  visibility: hidden;
+}
+
 /*Bordure du body*/
 body {
   margin: 0;
@@ -490,11 +518,11 @@ span {
   position: relative;
   top: 15px;
 }
-.box_flex:hover .box_flex {
+.box_flex:hover {
   animation: slidein 0.5s ease;
   transform-origin: right;
 }
-.box_flex:hover .menu_price {
+.box_flex.menu_price:hover {
   padding-right: 50px;
   transition: 0.5 ease;
 }
