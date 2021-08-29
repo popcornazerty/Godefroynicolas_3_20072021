@@ -10,14 +10,23 @@
 /*Filtres Fonctionnement*/
 @media screen and (min-width: 800px){
 .filter_bloc {
+  /*display:flex;
   flex-direction: row;
   width: 100%;
+  */
+  display: flex !important;
+  flex-direction: row !important;
+  .filter {
+    display: block;
+    width: 33%;
   }
-  .wrapper_all_restaurants .restaurant_cards {
+
+  }
+  /*.wrapper_all_restaurants .restaurant_cards {
     display: flex;
     gap: 20px;
     flex-direction: row;
-  }    
+  } */   
 }  
 * {
   box-sizing: border-box;
