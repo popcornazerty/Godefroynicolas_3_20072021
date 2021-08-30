@@ -17,17 +17,44 @@
   display: flex !important;
   flex-direction: row !important;
   .filter {
-    display: block;
+    
     width: 33%;
+    .choice{
+      left:60px;
+    }
   }
 
   }
-  /*.wrapper_all_restaurants .restaurant_cards {
+  .wrapper_all_restaurants .restaurant_cards {
+    
+    
+    flex-direction: row!important;
+  }   
+  .restaurant_cards a{
+    width: calc((100% / 2) - 20px)!important;
+  } 
+  footer .bloc_footer ul {
+
+    padding-left: 0px;
+    margin:0px;
+    align-content:center;
     display: flex;
-    gap: 20px;
-    flex-direction: row;
-  } */   
+    justify-content: space-evenly;
+    gap: 30px;
+    height:60px;
+    align-items: center;
+    } 
+.bloc_menu{
+  display:flex;
+  &.starters, .main_course, .desserts{
+    width: calc((100% / 3) - 20px);
+  }
+}    
+/*Bloc entre, plats, desserts*/ 
+ 
 }  
+
+/*Responsive*/
 * {
   box-sizing: border-box;
 }

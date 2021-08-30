@@ -68,16 +68,41 @@ footer .bloc_footer .titre-pied-page {
     flex-direction: row !important;
   }
   .filter_bloc .filter {
-    display: block;
     width: 33%;
   }
+  .filter_bloc .filter .choice {
+    left: 60px;
+  }
 
-  /*.wrapper_all_restaurants .restaurant_cards {
+  .wrapper_all_restaurants .restaurant_cards {
+    flex-direction: row !important;
+  }
+
+  .restaurant_cards a {
+    width: calc((100% / 2) - 20px) !important;
+  }
+
+  footer .bloc_footer ul {
+    padding-left: 0px;
+    margin: 0px;
+    align-content: center;
     display: flex;
-    gap: 20px;
-    flex-direction: row;
-  } */
+    justify-content: space-evenly;
+    gap: 30px;
+    height: 60px;
+    align-items: center;
+  }
+
+  .bloc_menu {
+    display: flex;
+  }
+  .bloc_menu.starters, .bloc_menu .main_course, .bloc_menu .desserts {
+    width: calc((100% / 3) - 20px);
+  }
+
+  /*Bloc entre, plats, desserts*/
 }
+/*Responsive*/
 * {
   box-sizing: border-box;
 }
