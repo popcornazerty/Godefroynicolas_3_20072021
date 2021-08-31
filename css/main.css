@@ -74,8 +74,14 @@ footer .bloc_footer .titre-pied-page {
     left: 60px;
   }
 
+  .wrapper_all_restaurants {
+    padding-right: 0px !important;
+  }
+
   .wrapper_all_restaurants .restaurant_cards {
+    flex-wrap: wrap;
     flex-direction: row !important;
+    padding-right: 0px !important;
   }
 
   .restaurant_cards a {
