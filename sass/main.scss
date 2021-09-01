@@ -22,8 +22,13 @@
     .choice{
       left:60px;
     }
+    }
   }
-
+  .starters .menu_price, .main_course .menu_price, .desserts .menu_price {
+    display:flex!important;
+  }
+  .starters, .main_course, .desserts{
+    width: 400px!important;
   }
   .wrapper_all_restaurants{
     padding-right: 0px!important;
@@ -49,11 +54,20 @@
     align-items: center;
     } 
 .bloc_menu{
-  display:flex;
-  &.starters, .main_course, .desserts{
-    width: calc((100% / 3) - 20px);
+    display:flex;
+    gap:20px;
+  /*&.starters, .main_course, .desserts{
+    width: calc((250px / 3) - 20px);
   }
-}    
+  */
+  /*Etiquettes entrées restaurant*/
+  .starters .menu_price, .main_course .menu_price, .desserts .menu_price {
+    float: none;
+ }  
+
+} 
+
+ 
 /*Bloc entre, plats, desserts*/ 
  
 }  
@@ -69,7 +83,7 @@
   border-top: 16px ridge #9356dc;
   height: 120px;
   width: 120px;
-  animation: loader 4s linear;
+  animation: loader 3s linear;
   position: absolute;
   top:0;
   right:0;
@@ -95,7 +109,7 @@
 @keyframes wrapper {
   0% { 
     visibility: visible;
-  opacity: 70%;}
+  opacity: 90%;}
   60% {
     opacity: 70%;
   }
@@ -117,7 +131,7 @@
   bottom: 0;
   z-index: 20;
   
-  animation: wrapper 4s linear;
+  animation: wrapper 3s linear;
   visibility: hidden;
   
 }

@@ -74,6 +74,14 @@ footer .bloc_footer .titre-pied-page {
     left: 60px;
   }
 
+  .starters .menu_price, .main_course .menu_price, .desserts .menu_price {
+    display: flex !important;
+  }
+
+  .starters, .main_course, .desserts {
+    width: 400px !important;
+  }
+
   .wrapper_all_restaurants {
     padding-right: 0px !important;
   }
@@ -101,9 +109,15 @@ footer .bloc_footer .titre-pied-page {
 
   .bloc_menu {
     display: flex;
+    gap: 20px;
+    /*&.starters, .main_course, .desserts{
+      width: calc((250px / 3) - 20px);
+    }
+    */
+    /*Etiquettes entrées restaurant*/
   }
-  .bloc_menu.starters, .bloc_menu .main_course, .bloc_menu .desserts {
-    width: calc((100% / 3) - 20px);
+  .bloc_menu .starters .menu_price, .bloc_menu .main_course .menu_price, .bloc_menu .desserts .menu_price {
+    float: none;
   }
 
   /*Bloc entre, plats, desserts*/
@@ -119,7 +133,7 @@ footer .bloc_footer .titre-pied-page {
   border-top: 16px ridge #9356dc;
   height: 120px;
   width: 120px;
-  animation: loader 4s linear;
+  animation: loader 3s linear;
   position: absolute;
   top: 0;
   right: 0;
@@ -147,7 +161,7 @@ footer .bloc_footer .titre-pied-page {
 @keyframes wrapper {
   0% {
     visibility: visible;
-    opacity: 70%;
+    opacity: 90%;
   }
   60% {
     opacity: 70%;
@@ -168,7 +182,7 @@ footer .bloc_footer .titre-pied-page {
   right: 0;
   bottom: 0;
   z-index: 20;
-  animation: wrapper 4s linear;
+  animation: wrapper 3s linear;
   visibility: hidden;
 }
 
