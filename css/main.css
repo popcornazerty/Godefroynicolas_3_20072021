@@ -82,6 +82,27 @@ footer .bloc_footer .titre-pied-page {
     width: 400px !important;
   }
 
+  .starters {
+    height: 143px;
+  }
+
+  .main_course {
+    height: 120px;
+  }
+
+  .desserts {
+    height: 120px;
+  }
+
+  .starters span, .main_course span, .desserts span {
+    line-height: 1.6em;
+  }
+
+  span.menu_price {
+    position: absolute;
+    bottom: 10px;
+  }
+
   .wrapper_all_restaurants {
     padding-right: 0px !important;
   }
