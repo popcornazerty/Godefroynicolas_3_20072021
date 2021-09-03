@@ -481,6 +481,11 @@ span {
   box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
 }
 
+/*Fleche retour page restaurant*/
+.fa-arrow-left:active {
+  color: black;
+}
+
 /*  PAGE RESTAURANT LA NOTE ENCHANTEE*/
 /*font menu*/
 #menu {
