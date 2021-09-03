@@ -562,9 +562,50 @@ span {
   font-size: 0.9rem;
 }
 
-.starters {
-  animation-delay: 0.1s;
+/*Opacités etiquettes*/
+.starters, .main_course, .desserts {
   animation: opacity 1s both;
+}
+
+/*affichages cartes avec délai*/
+#etiquette_1 {
+  animation-delay: 0.1s;
+}
+
+#etiquette_2 {
+  animation-delay: 0.2s;
+}
+
+#etiquette_3 {
+  animation-delay: 0.3s;
+}
+
+#etiquette_4 {
+  animation-delay: 0.4s;
+}
+
+#etiquette_5 {
+  animation-delay: 0.5s;
+}
+
+#etiquette_6 {
+  animation-delay: 0.6s;
+}
+
+#etiquette_7 {
+  animation-delay: 0.7s;
+}
+
+#etiquette_8 {
+  animation-delay: 0.8s;
+}
+
+#etiquette_9 {
+  animation-delay: 0.9s;
+}
+
+#etiquette_10 {
+  animation-delay: 1s;
 }
 
 /*Bloc menu*/
