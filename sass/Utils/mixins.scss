@@ -79,10 +79,7 @@
 
 @mixin card_menu($padding,$padding-right,$margin,$font){
     background: #ffffff;
-    
-    
     cursor:pointer;
- 
     margin-bottom: $margin;
     width: auto;
     padding:$padding;

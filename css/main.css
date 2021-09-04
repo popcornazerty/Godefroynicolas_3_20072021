@@ -638,15 +638,42 @@ span {
   position: relative;
   top: 15px;
 }
-.box_flex:hover {
-  animation: slidein 0.5s ease;
-  transform-origin: right;
+
+/*  
+  &:hover{
+    animation: slidein 0.5s ease ;
+    transform-origin: right; 
+  }
+  &.menu_price:hover{
+    padding-right: 50px;
+    transition: 0.5 ease;
+  }
 }
-.box_flex.menu_price:hover {
-  padding-right: 50px;
-  transition: 0.5 ease;
+*/
+.box_flex {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
 }
 
+#etiquette_1:hover .box_flex {
+  background-color: #99E2D0 !important;
+  transform: translate3d(0, 0, 0);
+  transition: transform ease 1s;
+  opacity: 1;
+}
+
+/*
+.box_flex {
+  background-color: white;
+
+}
+
+#etiquette_1:hover .box_flex{
+  background-color: orange !important;
+
+  animation: slidein 1s ease;
+}
+*/
 @keyframes rotate {
   0% {
     transform: rotate(0);
