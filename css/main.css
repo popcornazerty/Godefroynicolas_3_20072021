@@ -74,11 +74,15 @@ footer .bloc_footer .titre-pied-page {
     left: 60px;
   }
 
-  .starters .menu_price, .main_course .menu_price, .desserts .menu_price {
+  .starters .menu_price,
+.main_course .menu_price,
+.desserts .menu_price {
     display: flex !important;
   }
 
-  .starters, .main_course, .desserts {
+  .starters,
+.main_course,
+.desserts {
     width: 400px !important;
   }
 
@@ -94,7 +98,9 @@ footer .bloc_footer .titre-pied-page {
     height: 120px;
   }
 
-  .starters span, .main_course span, .desserts span {
+  .starters span,
+.main_course span,
+.desserts span {
     line-height: 1.6em;
   }
 
@@ -137,7 +143,9 @@ footer .bloc_footer .titre-pied-page {
     */
     /*Etiquettes entrées restaurant*/
   }
-  .bloc_menu .starters .menu_price, .bloc_menu .main_course .menu_price, .bloc_menu .desserts .menu_price {
+  .bloc_menu .starters .menu_price,
+.bloc_menu .main_course .menu_price,
+.bloc_menu .desserts .menu_price {
     float: none;
   }
 
@@ -234,10 +242,10 @@ h4 {
 html {
   box-sizing: border-box;
   /*
-  font-family: "shrikhand";
-  font-weight: 900;
-  color: green;
-  */
+   font-family: "shrikhand";
+   font-weight: 900;
+   color: green;
+   */
 }
 
 html {
@@ -468,7 +476,8 @@ span {
   cursor: pointer;
 }
 
-.block_heart, .heart_empty {
+.block_heart,
+.heart_empty {
   width: 26px;
   position: relative;
 }
@@ -541,7 +550,9 @@ span {
 }
 
 /*Encadrement entrées*/
-.starters, .main_course, .desserts {
+.starters,
+.main_course,
+.desserts {
   background: #ffffff;
   cursor: pointer;
   margin-bottom: 10px;
@@ -552,23 +563,33 @@ span {
   position: relative;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
 }
-.starters .menu_bold, .main_course .menu_bold, .desserts .menu_bold {
+.starters .menu_bold,
+.main_course .menu_bold,
+.desserts .menu_bold {
   display: block;
   text-align: left;
 }
-.starters .menu_price, .main_course .menu_price, .desserts .menu_price {
+.starters .menu_price,
+.main_course .menu_price,
+.desserts .menu_price {
   float: right;
 }
-.starters .menu_light, .main_course .menu_light, .desserts .menu_light {
+.starters .menu_light,
+.main_course .menu_light,
+.desserts .menu_light {
   font-weight: 100;
 }
-.starters span, .main_course span, .desserts span {
+.starters span,
+.main_course span,
+.desserts span {
   padding: 0;
   font-size: 0.9rem;
 }
 
 /*Opacités etiquettes*/
-.starters, .main_course, .desserts {
+.starters,
+.main_course,
+.desserts {
   animation: opacity 1s both;
 }
 
@@ -621,6 +642,7 @@ span {
 }
 
 /*slide validation*/
+/*slide validation*/
 .box_flex {
   position: absolute;
   background: #99E2D0;
@@ -630,13 +652,17 @@ span {
   padding: 0 13px;
   height: 100%;
 }
-.box_flex.box_flex i {
+.box_flex:hover i {
   font-size: 30px;
   color: white;
   transform: rotate(180deg);
   animation: rotate 0.5s both;
   position: relative;
   top: 15px;
+}
+.box_flex:hover i.menu_price:hover {
+  padding-right: 50px;
+  transition: 0.5 ease;
 }
 
 /*  
@@ -651,7 +677,7 @@ span {
 }
 */
 .box_flex {
-  transform: translate3d(100%, 0, 0);
+  transform: translate(100%, 0, 0);
   opacity: 0;
 }
 
@@ -660,6 +686,17 @@ span {
   transform: translate3d(0, 0, 0);
   transition: transform ease 1s;
   opacity: 1;
+}
+
+.menu_price:hover {
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width ease 1s;
+  z-index: 99;
+}
+
+.menu_bold, .menu_light {
+  text-overflow: ellipsis;
 }
 
 /*
@@ -727,10 +764,10 @@ footer ul li {
 
 /*
   .typography {
-      color: $colour-primary;
-      font-size: 2rem;
-      font-weight: 100;
-      line-height: 1.7;
+      color: $colour-primary;
+      font-size: 2rem;
+      font-weight: 100;
+      line-height: 1.7;
     }
     h1 {
     @extend .typography;
@@ -769,61 +806,61 @@ h2{
   }
 
 .parent {
-  background-color: #15DEA5;
-  .descendant {
-      color: #fff;
-  }
-  >.child {
-      color: #D6FFF5;
-  }
-  +.adjacent {
-      color: #001534;
-  }
+  background-color: #15DEA5;
+  .descendant {
+      color: #fff;
+  }
+  >.child {
+      color: #D6FFF5;
+  }
+  +.adjacent {
+      color: #001534;
+  }
 }
 
 
 
 
 .block{
-  background-color: #15DEA5;
-  .block__element {
-      color: #fff;
-  }
+  background-color: #15DEA5;
+  .block__element {
+      color: #fff;
+  }
 
 
 OR
 
 .block{
-  background-color: #15DEA5;
-  &__element {
-      color: #fff;
-  }
+  background-color: #15DEA5;
+  &__element {
+      color: #fff;
+  }
 }
 
 BEM
-   
-.block{
-  background-color: #15DEA5;
-  .block__element {
-      color: #fff;
-  }
 
-   .block__element--modifier {
-      background-color: #001534;
-  }
+.block{
+  background-color: #15DEA5;
+  .block__element {
+      color: #fff;
+  }
+
+   .block__element--modifier {
+      background-color: #001534;
+  }
 }
 or 
 
 
 
 .block{
-  background-color: #15DEA5;
-  &__element {
-      color: #fff;
-        &--modifier {
-            background-color: #001534;
-  }
-  }
+  background-color: #15DEA5;
+  &__element {
+      color: #fff;
+        &--modifier {
+            background-color: #001534;
+  }
+  }
 }
 
 
@@ -832,45 +869,45 @@ or
 
 
   .btn {
-      display: inline-block;
-      margin: 0 auto;
-      background: #15DEA5;
-      padding: 1rem;
+      display: inline-block;
+      margin: 0 auto;
+      background: #15DEA5;
+      padding: 1rem;
     }
 
     .btn--disabled {
-      background: grey;
+      background: grey;
     }
 
     .btn--outline {
-      background: transparent;
-      border: 2px solid #15DEA5;
+      background: transparent;
+      border: 2px solid #15DEA5;
     }
 
     .btn--outline.btn--disabled {
-      border: 2px solid grey;
+      border: 2px solid grey;
     }
 
     =
 
 
     .btn {
-          display: inline-block;
-          margin: 0 auto;
-          background: #15DEA5;
-          padding: 1rem;
-          &--disabled {
-              background: grey;
-          }
+          display: inline-block;
+          margin: 0 auto;
+          background: #15DEA5;
+          padding: 1rem;
+          &--disabled {
+              background: grey;
+          }
 
-           &--outline {
-              background: transparent;
-              border: 2px solid #15DEA5;
-              &.btn--disabled{
+           &--outline {
+              background: transparent;
+              border: 2px solid #15DEA5;
+              &.btn--disabled{
 
-                 border: 2px solid grey;
-              }
-          }
+                 border: 2px solid grey;
+              }
+          }
         }
 
 
