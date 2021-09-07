@@ -642,99 +642,49 @@ span {
 }
 
 /*slide validation*/
-/*slide validation*/
 .box_flex {
   position: absolute;
+  width: 0px;
   background: #99E2D0;
   border-radius: 0 10px 10px 0;
   right: 0px;
   top: 0px;
-  padding: 0 13px;
   height: 100%;
+  transition: width ease 0.5s;
+  contain: strict;
 }
-.box_flex:hover i {
+.box_flex .checkbox {
   font-size: 30px;
   color: white;
-  transform: rotate(180deg);
-  animation: rotate 0.5s both;
-  position: relative;
   top: 15px;
-}
-.box_flex:hover i.menu_price:hover {
-  padding-right: 50px;
-  transition: 0.5 ease;
-}
-
-/*  
-  &:hover{
-    animation: slidein 0.5s ease ;
-    transform-origin: right; 
-  }
-  &.menu_price:hover{
-    padding-right: 50px;
-    transition: 0.5 ease;
-  }
-}
-*/
-.box_flex {
-  transform: translate(100%, 0, 0);
-  opacity: 0;
+  left: 25px;
+  position: relative;
+  transition: transform ease 0.5s;
 }
 
 #etiquette_1:hover .box_flex {
-  background-color: #99E2D0 !important;
-  transform: translate3d(0, 0, 0);
-  transition: transform ease 1s;
-  opacity: 1;
+  width: 80px;
 }
 
-.menu_price:hover {
+#etiquette_1:hover .checkbox {
+  transform: rotate(360deg);
+}
+
+.menu_price {
+  display: inline-block;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  background: yellow;
   overflow: hidden;
   transition: width ease 1s;
-  z-index: 99;
+  width: calc(100%-35px) !important;
 }
 
-.menu_bold, .menu_light {
+.menu_bold:hover,
+.menu_light:hover {
   text-overflow: ellipsis;
 }
 
-/*
-.box_flex {
-  background-color: white;
-
-}
-
-#etiquette_1:hover .box_flex{
-  background-color: orange !important;
-
-  animation: slidein 1s ease;
-}
-*/
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes slidein {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(-50px);
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /*textes entrées light*/
 /*Bouton Order*/
 .order_btn {
