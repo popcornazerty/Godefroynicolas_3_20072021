@@ -35,6 +35,7 @@
 	.main_course,
 	.desserts {
 		width: 400px!important;
+   
 	}
 	.starters {
 		height: 143px;
@@ -65,17 +66,7 @@
 	.restaurant_cards a {
 		width: calc((100% / 2) - 20px)!important;
 	}
-	footer .bloc_footer ul {
-		padding-left: 0px;
-		margin: 0px;
-		align-content: center;
-		display: flex;
-		justify-content: space-evenly;
-		gap: 30px;
-		height: 60px;
-		align-items: center;
-	}
-	.bloc_menu {
+  .bloc_menu {
 		display: flex;
 		gap: 20px;
 		/*&.starters, .main_course, .desserts{
@@ -88,6 +79,21 @@
 		.desserts .menu_price {
 			float: none;
 		}
+    /* Icone check*/
+.box_flex .checkbox{
+  top:53px;
+}    
+	footer .bloc_footer ul {
+		padding-left: 0px;
+		margin: 0px;
+		align-content: center;
+		display: flex;
+		justify-content: space-evenly;
+		gap: 30px;
+		height: 60px;
+		align-items: center;
+	}
+	
 	}
   
 	/*Bloc entre, plats, desserts*/
@@ -108,7 +114,7 @@
 	border-top: 16px ridge #9356dc;
 	height: 120px;
 	width: 120px;
-	animation: loader 3s linear;
+	animation: loader 0s linear;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -479,7 +485,8 @@ span {
 	@include card_menu(15px,
 	20px,
 	10px,
-	100);
+	100,
+  auto);
 }
 
 
@@ -566,29 +573,45 @@ span {
 	}
 }
 
-#etiquette_1:hover .box_flex {
+.starters:hover .box_flex  {
 	width: 80px;
 }
-
-#etiquette_1:hover .checkbox {
+.main_course:hover .box_flex {
+	width: 80px;
+}
+.desserts:hover .box_flex {
+	width: 80px;
+}
+.starters:hover .checkbox {
+	transform: rotate(360deg);
+}
+.main_course:hover .checkbox {
+	transform: rotate(360deg);
+}
+.desserts:hover .checkbox {
+	transform: rotate(360deg);
+}
+.starters,.main_course,.desserts:hover .checkbox {
 	transform: rotate(360deg);
 }
 
-.menu_price {
-  display:inline-block;
+.menu_price:hover{
+ 
+	transition: width ease 0.5s;
+  
+}
+
+
+
+/* Elipses texte*/
+.starters:hover .menu_price{
+  
 	text-overflow: ellipsis;
 	white-space: nowrap;
-  background: yellow;
 	overflow: hidden;
-	transition: width ease 0.5s;
-  width: calc(100%-35px)!important;
+  //width: calc(100% - 500px)!important;
+  transition: width ease 0.5s;
 }
-
-.menu_bold:hover,
-.menu_light:hover {
-	text-overflow: ellipsis;
-}
-
 
 /*textes entrées light*/
 

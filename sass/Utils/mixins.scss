@@ -76,15 +76,16 @@
 	bottom: 24px;
 }
 
-@mixin card_menu($padding, $padding-right, $margin, $font) {
+@mixin card_menu($padding, $padding-right, $margin, $font,$width) {
 	background: #ffffff;
 	cursor: pointer;
 	margin-bottom: $margin;
-	width: auto;
+	width: $width;
 	padding: $padding;
 	padding-right: $padding-right;
 	border-radius: 10px;
 	position: relative;
+	
 	box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%);
 	.menu_bold {
 		display: block;
