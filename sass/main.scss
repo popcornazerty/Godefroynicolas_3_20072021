@@ -595,11 +595,6 @@ span {
 	transform: rotate(360deg);
 }
 
-.menu_price:hover{
- 
-	transition: width ease 0.5s;
-  
-}
 
 
 
@@ -609,10 +604,17 @@ span {
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-  //width: calc(100% - 500px)!important;
-  transition: width ease 0.5s;
+ width: 200px; // width:(100% - 50px);
+ transition: width ease 1s; 
 }
 
+
+.starters:hover {
+  text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+  
+}
 /*textes entrées light*/
 
 
