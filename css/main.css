@@ -85,7 +85,7 @@ footer .bloc_footer .titre-pied-page {
 .main_course,
 .desserts {
     width: 400px !important;
-    height: 120px;
+    height: 140px;
   }
   .starters span,
 .main_course span,
@@ -100,6 +100,7 @@ footer .bloc_footer .titre-pied-page {
   span.menu_price {
     position: absolute;
     bottom: 10px;
+    transform: translateY(5px);
   }
 
   .wrapper_all_restaurants {
@@ -232,6 +233,10 @@ h4 {
   font-size: 1.17em;
 }
 
+span.subtitle_main_title {
+  text-align: center;
+}
+
 /*Mise en page*/
 html {
   box-sizing: border-box;
@@ -308,7 +313,6 @@ html {
 
 /*element carte restaurant*/
 span {
-  text-align: center;
   padding-left: 15px;
 }
 
@@ -524,8 +528,7 @@ span {
   background: #ffffff;
   cursor: pointer;
   margin-bottom: 10px;
-  width: auto;
-  padding: 15px;
+  padding: 15px 15px 0px;
   padding-right: 20px;
   border-radius: 10px;
   position: relative;
@@ -534,13 +537,14 @@ span {
 .starters .menu_bold,
 .main_course .menu_bold,
 .desserts .menu_bold {
-  display: block;
   text-align: left;
+  padding-bottom: 5px;
 }
 .starters .menu_price,
 .main_course .menu_price,
 .desserts .menu_price {
-  float: right;
+  text-align: right;
+  transform: translateY(-15px);
 }
 .starters .menu_light,
 .main_course .menu_light,
@@ -552,6 +556,7 @@ span {
 .desserts span {
   padding: 0;
   font-size: 0.9rem;
+  display: block;
 }
 
 /*Opacités etiquettes*/
@@ -659,24 +664,29 @@ span {
 }
 
 /* Elipses texte*/
-.starters:hover .menu_price {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 200px;
-  transition: width ease 1s;
+.span {
+  width: ease 0.5;
 }
 
-.starters:hover {
+.starters:hover span {
+  width: calc(100% - 90px);
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
 }
 
-.menu_price {
+.main_course:hover span {
+  width: calc(100% - 90px);
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
+}
+
+.desserts:hover span {
+  width: calc(100% - 90px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /*textes entrées light*/

@@ -36,7 +36,7 @@
 	.main_course,
 	.desserts {
 		width: 400px!important;
-    height: 120px;
+    height: 140px;
     span {
       line-height: 1.6em;
     }
@@ -46,11 +46,12 @@
 		height: 143px;
 	}
 
-
+	
 
 	span.menu_price {
 		position: absolute;
 		bottom: 10px;
+		transform: translateY(5px);	
 	}
 
 	.wrapper_all_restaurants {
@@ -197,7 +198,9 @@ h4 {
 	font-size: 1.17em;
 }
 
-
+span.subtitle_main_title{
+text-align: center;
+}
 /*Mise en page*/
 
 html {
@@ -273,7 +276,7 @@ html {
 /*element carte restaurant*/
 
 span {
-	text-align: center;
+
 	padding-left: 15px;
 }
 
@@ -479,11 +482,10 @@ span {
 .starters,
 .main_course,
 .desserts {
-	@include card_menu(15px,
+	@include card_menu(15px 15px 0px,
 	20px,
 	10px,
-	100,
-  auto);
+	100);
 }
 
 
@@ -596,27 +598,32 @@ span {
 
 
 /* Elipses texte*/
-.starters:hover .menu_price{
-  
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
- width: 200px; // width:(100% - 50px);
- transition: width ease 1s; 
+
+
+.span{
+	width: ease 0.5;
+}
+
+.starters:hover span{
+	width:calc(100% - 90px);
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.main_course:hover span{
+	width:calc(100% - 90px);
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.desserts:hover span{
+	width:calc(100% - 90px);
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
 }
 
 
-.starters:hover {
-  text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-  
-}
-.menu_price{
-  text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-}
 /*textes entrées light*/
 
 

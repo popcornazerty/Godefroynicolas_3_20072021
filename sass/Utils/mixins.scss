@@ -76,11 +76,10 @@
 	bottom: 24px;
 }
 
-@mixin card_menu($padding, $padding-right, $margin, $font,$width) {
+@mixin card_menu($padding, $padding-right, $margin, $font) {
 	background: #ffffff;
 	cursor: pointer;
 	margin-bottom: $margin;
-	width: $width;
 	padding: $padding;
 	padding-right: $padding-right;
 	border-radius: 10px;
@@ -88,11 +87,14 @@
 	
 	box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 16%);
 	.menu_bold {
-		display: block;
+		
 		text-align: left;
+		padding-bottom: 5px;
 	}
 	.menu_price {
-		float: right;
+		text-align: right;
+		transform: translateY(-15px);
+		
 	}
 	.menu_light {
 		font-weight: $font;
@@ -100,6 +102,7 @@
 	span {
 		padding: 0;
 		font-size: 0.9rem;
+		display: block;
 	}
 }
 
