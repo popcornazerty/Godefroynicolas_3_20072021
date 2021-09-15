@@ -114,22 +114,25 @@ footer .bloc_footer .titre-pied-page {
   .bloc_menu {
     display: flex;
     gap: 20px;
-    /*&.starters, .main_course, .desserts{
-      width: calc((250px / 3) - 20px);
-    }
-    */
-    /*Etiquettes entrées restaurant*/
-    /* Icone check*/
   }
-  .bloc_menu .starters .menu_price,
-.bloc_menu .main_course .menu_price,
-.bloc_menu .desserts .menu_price {
+
+  /*&.starters, .main_course, .desserts{
+    width: calc((250px / 3) - 20px);
+  }
+  */
+  /*Etiquettes entrées restaurant*/
+  .starters .menu_price,
+.main_course .menu_price,
+.desserts .menu_price {
     float: none;
   }
-  .bloc_menu .box_flex .checkbox {
+
+  /* Icone check*/
+  .box_flex .checkbox {
     top: 53px;
   }
-  .bloc_menu footer .bloc_footer ul {
+
+  footer .bloc_footer ul {
     padding-left: 0px;
     margin: 0px;
     align-content: center;
@@ -139,9 +142,8 @@ footer .bloc_footer .titre-pied-page {
     height: 60px;
     align-items: center;
   }
-
-  /*Bloc entre, plats, desserts*/
 }
+/*Bloc entre, plats, desserts*/
 /*Responsive*/
 * {
   box-sizing: border-box;

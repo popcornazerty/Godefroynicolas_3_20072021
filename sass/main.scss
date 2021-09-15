@@ -67,6 +67,7 @@
   .bloc_menu {
 		display: flex;
 		gap: 20px;
+  }
 		/*&.starters, .main_course, .desserts{
     width: calc((250px / 3) - 20px);
   }
@@ -80,22 +81,23 @@
     /* Icone check*/
 .box_flex .checkbox{
   top:53px;
-}    
-	footer .bloc_footer ul {
+}  
+
+footer .bloc_footer ul {
 		padding-left: 0px;
 		margin: 0px;
 		align-content: center;
 		display: flex;
 		justify-content: space-evenly;
 		gap: 30px;
-    height: 60px;
+    	height: 60px;
 		align-items: center;
 	}
 	
-	}
-  
+	
+}  
 	/*Bloc entre, plats, desserts*/
-}
+
 
 
 /*Responsive*/
