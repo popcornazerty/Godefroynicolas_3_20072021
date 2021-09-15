@@ -58,7 +58,7 @@ footer .bloc_footer .titre-pied-page {
 /* Les couleurs */
 /*Responsive desktop*/
 /*Filtres Fonctionnement*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .filter_bloc {
     /*display:flex;
     flex-direction: row;
@@ -85,16 +85,12 @@ footer .bloc_footer .titre-pied-page {
 .main_course,
 .desserts {
     width: 400px !important;
-    height: 140px;
+    height: 159px;
   }
   .starters span,
 .main_course span,
 .desserts span {
     line-height: 1.6em;
-  }
-
-  .starters {
-    height: 143px;
   }
 
   span.menu_price {
@@ -157,7 +153,7 @@ footer .bloc_footer .titre-pied-page {
   border-top: 16px ridge #9356dc;
   height: 120px;
   width: 120px;
-  animation: loader 0s linear;
+  animation: loader 1.5s linear;
   position: absolute;
   top: 0;
   right: 0;
@@ -206,7 +202,7 @@ footer .bloc_footer .titre-pied-page {
   right: 0;
   bottom: 0;
   z-index: 20;
-  animation: wrapper 3s linear;
+  animation: wrapper 1.5s linear;
   visibility: hidden;
 }
 

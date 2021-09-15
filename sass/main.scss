@@ -10,7 +10,7 @@
 
 /*Filtres Fonctionnement*/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
 	.filter_bloc {
 		/*display:flex;
   flex-direction: row;
@@ -36,15 +36,13 @@
 	.main_course,
 	.desserts {
 		width: 400px!important;
-    height: 140px;
+    height: 159px;
     span {
       line-height: 1.6em;
     }
 	}
 
-	.starters {
-		height: 143px;
-	}
+	
 
 	
 
@@ -114,7 +112,7 @@
 	border-top: 16px ridge #9356dc;
 	height: 120px;
 	width: 120px;
-	animation: loader 0s linear;
+	animation: loader 1.5s linear;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -167,7 +165,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 20;
-	animation: wrapper 3s linear;
+	animation: wrapper 1.5s linear;
 	visibility: hidden;
 }
 
@@ -530,6 +528,7 @@ span {
 
 #etiquette_8 {
 	animation-delay: 0.8s;
+
 }
 
 #etiquette_9 {
