@@ -84,19 +84,13 @@ footer .bloc_footer .titre-pied-page {
   .starters,
 .main_course,
 .desserts {
-    width: 400px !important;
-    height: 159px;
+    width: 100%;
+    height: 120px !important;
   }
   .starters span,
 .main_course span,
 .desserts span {
     line-height: 1.6em;
-  }
-
-  span.menu_price {
-    position: absolute;
-    bottom: 10px;
-    transform: translateY(5px);
   }
 
   .wrapper_all_restaurants {
@@ -116,10 +110,6 @@ footer .bloc_footer .titre-pied-page {
     gap: 20px;
   }
 
-  /*&.starters, .main_course, .desserts{
-    width: calc((250px / 3) - 20px);
-  }
-  */
   /*Etiquettes entrées restaurant*/
   .starters .menu_price,
 .main_course .menu_price,
@@ -143,7 +133,6 @@ footer .bloc_footer .titre-pied-page {
     align-items: center;
   }
 }
-/*Bloc entre, plats, desserts*/
 /*Responsive*/
 * {
   box-sizing: border-box;
@@ -528,20 +517,9 @@ span {
   padding: 15px 15px 0px;
   padding-right: 20px;
   border-radius: 10px;
-  position: relative;
+  width: 100%;
+  height: 100%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-}
-.starters .menu_bold,
-.main_course .menu_bold,
-.desserts .menu_bold {
-  text-align: left;
-  padding-bottom: 5px;
-}
-.starters .menu_price,
-.main_course .menu_price,
-.desserts .menu_price {
-  text-align: right;
-  transform: translateY(-15px);
 }
 .starters .menu_light,
 .main_course .menu_light,
@@ -554,6 +532,7 @@ span {
   padding: 0;
   font-size: 0.9rem;
   display: block;
+  padding-bottom: 5px;
 }
 
 /*Opacités etiquettes*/
@@ -644,19 +623,7 @@ span {
   width: 80px;
 }
 
-.starters:hover .checkbox {
-  transform: rotate(360deg);
-}
-
-.main_course:hover .checkbox {
-  transform: rotate(360deg);
-}
-
-.desserts:hover .checkbox {
-  transform: rotate(360deg);
-}
-
-.starters, .main_course, .desserts:hover .checkbox {
+.starters, .main_course, .desserts, .checkbox {
   transform: rotate(360deg);
 }
 
@@ -666,24 +633,39 @@ span {
 }
 
 .starters:hover span {
-  width: calc(100% - 90px);
+  width: calc(100% - 80px);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0;
 }
 
 .main_course:hover span {
-  width: calc(100% - 90px);
+  width: calc(100% - 20px);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0;
 }
 
 .desserts:hover span {
-  width: calc(100% - 90px);
+  width: calc(100% - 20px);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  margin: 0;
+}
+
+.menu_dish {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_light_and_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*textes entrées light*/

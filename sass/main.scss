@@ -35,8 +35,8 @@
 	.starters,
 	.main_course,
 	.desserts {
-		width: 400px!important;
-    height: 159px;
+	width:100%;
+   height:120px!important;
     span {
       line-height: 1.6em;
     }
@@ -46,11 +46,7 @@
 
 	
 
-	span.menu_price {
-		position: absolute;
-		bottom: 10px;
-		transform: translateY(5px);	
-	}
+	
 
 	.wrapper_all_restaurants {
 		padding-right: 0px!important;
@@ -68,10 +64,7 @@
 		display: flex;
 		gap: 20px;
   }
-		/*&.starters, .main_course, .desserts{
-    width: calc((250px / 3) - 20px);
-  }
-  */
+
 		/*Etiquettes entrées restaurant*/
 		.starters .menu_price,
 		.main_course .menu_price,
@@ -96,9 +89,6 @@ footer .bloc_footer ul {
 	
 	
 }  
-	/*Bloc entre, plats, desserts*/
-
-
 
 /*Responsive*/
 
@@ -575,6 +565,7 @@ span {
 
 .starters:hover .box_flex  {
 	width: 80px;
+	
 }
 .main_course:hover .box_flex {
 	width: 80px;
@@ -582,20 +573,14 @@ span {
 .desserts:hover .box_flex {
 	width: 80px;
 }
-.starters:hover .checkbox {
-	transform: rotate(360deg);
-}
-.main_course:hover .checkbox {
-	transform: rotate(360deg);
-}
-.desserts:hover .checkbox {
-	transform: rotate(360deg);
-}
-.starters,.main_course,.desserts:hover .checkbox {
+
+
+.starters,.main_course,.desserts, .checkbox {
 	transform: rotate(360deg);
 }
 
 
+// TEST
 
 
 /* Elipses texte*/
@@ -606,22 +591,43 @@ span {
 }
 
 .starters:hover span{
-	width:calc(100% - 90px);
+	width:calc(100% - 80px);
 	text-overflow:ellipsis;
 	overflow:hidden;
 	white-space:nowrap;
+	margin: 0;
 }
 .main_course:hover span{
-	width:calc(100% - 90px);
+	width:calc(100% - 20px);
 	text-overflow:ellipsis;
 	overflow:hidden;
 	white-space:nowrap;
+	margin: 0;
 }
 .desserts:hover span{
-	width:calc(100% - 90px);
+	width:calc(100% - 20px);
 	text-overflow:ellipsis;
 	overflow:hidden;
 	white-space:nowrap;
+	margin: 0;
+}
+
+
+//TEST
+
+
+
+
+
+.menu_dish{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.menu_light_and_price{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 
