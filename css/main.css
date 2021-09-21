@@ -54,7 +54,6 @@ footer .bloc_footer .titre-pied-page {
     box-shadow: 20px; 
 }
 */
-/*correct?*/
 /* Les couleurs */
 /*Responsive desktop*/
 /*Filtres Fonctionnement*/
@@ -455,7 +454,6 @@ span {
 }
 
 .heart:hover {
-  fill: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   opacity: 0.2;
   cursor: pointer;
   transition-duration: 0.8s;
@@ -658,10 +656,6 @@ span {
 }
 
 /* Elipses texte*/
-.span {
-  width: ease 0.5;
-}
-
 .starters:hover span {
   width: calc(100% - 80px);
   text-overflow: ellipsis;
