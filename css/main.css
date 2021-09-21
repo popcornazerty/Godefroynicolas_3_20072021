@@ -85,7 +85,7 @@ footer .bloc_footer .titre-pied-page {
 .main_course,
 .desserts {
     width: 100%;
-    height: 120px !important;
+    height: 140px !important;
   }
   .starters span,
 .main_course span,
@@ -110,16 +110,23 @@ footer .bloc_footer .titre-pied-page {
     gap: 20px;
   }
 
-  /*Etiquettes entrées restaurant*/
-  .starters .menu_price,
-.main_course .menu_price,
-.desserts .menu_price {
-    float: none;
-  }
-
   /* Icone check*/
   .box_flex .checkbox {
-    top: 53px;
+    font-size: 30px !important;
+    top: 52px !important;
+    left: 27px !important;
+  }
+
+  .starters:hover span {
+    width: calc(100% - 80px);
+  }
+
+  .main_course:hover span {
+    width: calc(100% - 80px) !important;
+  }
+
+  .desserts:hover span {
+    width: calc(100% - 20px);
   }
 
   footer .bloc_footer ul {
@@ -131,6 +138,12 @@ footer .bloc_footer .titre-pied-page {
     gap: 30px;
     height: 60px;
     align-items: center;
+  }
+
+  .starters span,
+.main_course span,
+.desserts span {
+    padding-top: 10px !important;
   }
 }
 /*Responsive*/
@@ -326,7 +339,7 @@ span {
   opacity: 0.8;
   cursor: pointer;
   transition-duration: 0.8s;
-  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 8px 4px -6px rgba(158, 195, 255, 0.71);
 }
 .filter:hover .icon_filter {
   color: #9356DC;
@@ -385,7 +398,7 @@ span {
 }
 .wrapper_all_restaurants .restaurant_cards a:hover {
   transition-duration: 0.8s;
-  box-shadow: 2px 8px 4px -6px #c28bf9;
+  box-shadow: 2px 8px 4px -6px rgba(158, 195, 255, 0.71);
 }
 
 /*Emplacement titre + coeur*/
@@ -543,6 +556,14 @@ span {
 }
 
 /*affichages cartes avec délai*/
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #etiquette_1 {
   animation-delay: 0.1s;
 }
@@ -603,10 +624,10 @@ span {
   contain: strict;
 }
 .box_flex .checkbox {
-  font-size: 30px;
+  font-size: 20px;
   color: white;
-  top: 15px;
-  left: 25px;
+  top: 20px;
+  left: 30px;
   position: relative;
   transition: transform ease 0.5s;
 }
@@ -623,7 +644,16 @@ span {
   width: 80px;
 }
 
-.starters, .main_course, .desserts, .checkbox {
+.starters,
+.main_course,
+.desserts,
+.checkbox {
+  transform: rotate(0deg);
+}
+
+.starters:hover .box_flex .checkbox,
+.main_course:hover .box_flex .checkbox,
+.desserts:hover .box_flex .checkbox {
   transform: rotate(360deg);
 }
 
@@ -694,225 +724,5 @@ span {
 footer ul li {
   margin-top: 5px;
 }
-
-/*
-  .typography {
-      color: $colour-primary;
-      font-size: 2rem;
-      font-weight: 100;
-      line-height: 1.7;
-    }
-    h1 {
-    @extend .typography;
-    }
-Couleurs
-primaire violet: #9356DC
-secondaire rose: #FF79DA
-tertiare vert d'eau:#99E2D0 
-
-
-
-h1{
-    font-family: 'roboto';
-    font-size: small;
-    font-weight: 200;
-
-}
-h2{
-    font-family:'shrikhand';
-}
-*/
-/* SASS
-.parent {
-    font-size: 1.5rem;
-    padding: 2rem;
-    background-color: #15DEA5;
-    color: #fff;
-    text-align: center;
-    border-radius: 2rem;
-    .child {
-    padding: 1rem;
-    background-color: #19647E;
-    margin-top: 1rem;
-    border-radius: 10rem;
-    }
-  }
-
-.parent {
-  background-color: #15DEA5;
-  .descendant {
-      color: #fff;
-  }
-  >.child {
-      color: #D6FFF5;
-  }
-  +.adjacent {
-      color: #001534;
-  }
-}
-
-
-
-
-.block{
-  background-color: #15DEA5;
-  .block__element {
-      color: #fff;
-  }
-
-
-OR
-
-.block{
-  background-color: #15DEA5;
-  &__element {
-      color: #fff;
-  }
-}
-
-BEM
-
-.block{
-  background-color: #15DEA5;
-  .block__element {
-      color: #fff;
-  }
-
-   .block__element--modifier {
-      background-color: #001534;
-  }
-}
-or 
-
-
-
-.block{
-  background-color: #15DEA5;
-  &__element {
-      color: #fff;
-        &--modifier {
-            background-color: #001534;
-  }
-  }
-}
-
-
-
-
-
-
-  .btn {
-      display: inline-block;
-      margin: 0 auto;
-      background: #15DEA5;
-      padding: 1rem;
-    }
-
-    .btn--disabled {
-      background: grey;
-    }
-
-    .btn--outline {
-      background: transparent;
-      border: 2px solid #15DEA5;
-    }
-
-    .btn--outline.btn--disabled {
-      border: 2px solid grey;
-    }
-
-    =
-
-
-    .btn {
-          display: inline-block;
-          margin: 0 auto;
-          background: #15DEA5;
-          padding: 1rem;
-          &--disabled {
-              background: grey;
-          }
-
-           &--outline {
-              background: transparent;
-              border: 2px solid #15DEA5;
-              &.btn--disabled{
-
-                 border: 2px solid grey;
-              }
-          }
-        }
-
-
-
-
-
-
-
-
-         .btn {
-            padding: 1.5rem;
-            background: #15DEA5;
-            cursor: pointer;
-            border-radius: 100rem;
-            font-size: 1.5rem;
-            color: #fff;
-
-            &--pink {
-                background-color: #EA526F;
-            }
-
-            &--outline {
-              background-color: unset;
-              border: 1px solid #15DEA5;
-              color: #15DEA5;
-
-              &.btn--pink {
-                  color: #EA526F;
-                  border-color: #EA526F;
-              }
-            }
-
-
-          }
-VARIABLES
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,900i');
-html, body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-$color-primary:blue;
-$color-secondary:#EA526F;
-.btn {
-  padding: 1.5rem;
-  background: $color-primary;
-  cursor: pointer;
-  border-radius: 100rem;
-  font-size: 1.5rem;
-  color: #fff;
-  &--pink {
-    background:$color-secondary;
-
-
-
-
-          */
-/*# sourceMappingURL=mobile.css.map */
 
 /*# sourceMappingURL=main.css.map */
